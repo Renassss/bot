@@ -110,7 +110,8 @@ function startPolling() {
         if (!chatId) return;
 
         // Fetch the token price from OKX
-        const currentPrice = await fetchTokenPrice(56, '0xf117dfcb241c0003d5e2fc72f288755c17a46980'); 
+        const currentPrice = await fetchTokenPrice(56, '0xf117DFCB241c0003d5e2FC72F288755C17a46980'); 
+        console.log('hsdasdsd' , currentPrice)
 
         if (currentPrice !== null) {
             // If the price has changed and price updates are enabled, send a message
@@ -147,7 +148,7 @@ Price: $${currentPrice.toFixed(4)}`;
         } else {
             console.log('No token price found');
         }
-    }, 1000); // Poll every 1 second (adjust as needed)
+    }, 1100); // Poll every 1 second (adjust as needed)
 }
 
 // Start the bot
